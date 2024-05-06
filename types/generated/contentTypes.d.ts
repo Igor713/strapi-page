@@ -368,6 +368,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -379,6 +380,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         maxLength: 255;
       }>;
     slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
+    sections: Attribute.DynamicZone<
+      ['section.section-two-columns', 'section.section-grid']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
