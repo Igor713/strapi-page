@@ -1,7 +1,8 @@
 {
   "collectionName": "components_section_section_metadata",
   "info": {
-    "displayName": "section_metadata"
+    "displayName": "section_metadata",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,13 +10,13 @@
       "type": "string",
       "required": true,
       "maxLength": 255,
-      "minLength": 5
+      "minLength": 4
     },
     "section_id": {
       "type": "string",
       "required": true,
       "maxLength": 50,
-      "minLength": 5,
+      "minLength": 4,
       "regex": "^[a-zA-Z]+([0-9-]*[a-zA-Z]+)*$"
     },
     "background": {

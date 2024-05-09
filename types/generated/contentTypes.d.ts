@@ -376,7 +376,7 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     title: Attribute.String &
       Attribute.SetMinMaxLength<{
-        minLength: 5;
+        minLength: 4;
         maxLength: 255;
       }>;
     slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
