@@ -381,8 +381,14 @@ export interface ApiPagePage extends Schema.CollectionType {
       }>;
     slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
     sections: Attribute.DynamicZone<
-      ['section.section-two-columns', 'section.section-grid']
+      [
+        'section.section-two-columns',
+        'section.section-grid',
+        'section.section-content'
+      ]
     >;
+    footer_text: Attribute.Blocks;
+    menu: Attribute.Component<'menu.menu'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
